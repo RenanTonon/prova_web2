@@ -34,48 +34,51 @@
 
         
         
-        <dialog id="dialog-template">
-            <form id="form-dialog">
-                <div class="visual-filtro">
-                    <p>tipo</p>
-                    <select class="tamanho-input">
-                        <option value="">Selecione</option>
-                        <option value="Noticia">Notícia</option>
-                        <option value="Realease">Release</option>
-
-                    </select>
-                </div>
-                <div class="visual-filtro">            
-                    <p>quantidade</p>
-                    <select class="tamanho-input">
-                        <option value="10">10</option>
-                        <option value="5">5</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                    </select></div>
-           
-                <div class="visual-filtro">
-                    <p>De</p>
-                    <input type="date" class="tamanho-input"></div>
-                </div>
-    
-                <div class="visual-filtro">
-                    <p>Até</p>
-                    <input type="date" class="tamanho-input">
-                </div>
-                <button type="sumit" id="aplicar-botao">Aplicar</button>
-            </form>
-            
-            <button id="voltar">X</button>
-        </dialog>
+        
     </header>
     <main>
 
-        <div id="principal">
-            <p>comida boa</p>
+        <div>
+            <ul id="principal">
+
+            </ul>
         </div>
     </main>
     <footer></footer>
+    <dialog id="dialog-template">
+        <form id="form-dialog">
+            <div class="visual-filtro">
+                <p>tipo</p>
+                <select class="tamanho-input">
+                    <option value="">Selecione</option>
+                    <option value="Noticia">Notícia</option>
+                    <option value="Realease">Release</option>
+
+                </select>
+            </div>
+            <div class="visual-filtro">            
+                <p>quantidade</p>
+                <select class="tamanho-input">
+                    <option value="10">10</option>
+                    <option value="5">5</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select></div>
+       
+            <div class="visual-filtro">
+                <p>De</p>
+                <input type="date" class="tamanho-input"></div>
+            </div>
+
+            <div class="visual-filtro">
+                <p>Até</p>
+                <input type="date" class="tamanho-input">
+            </div>
+            <button type="submit" id="aplicar-botao">Aplicar</button>
+        </form>
+        
+        <button id="voltar">X</button>
+    </dialog>
 </body>
 <script src="index.js"></script>
 </html>

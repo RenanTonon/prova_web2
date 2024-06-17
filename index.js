@@ -1,45 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
     const botaoDialog = document.getElementById("buttonDialog");
-    const dialog = document.querySelector("dialog");
+    const dialog = document.getElementById("dialog-template");
     const voltar = document.getElementById("voltar");
+    const aplicar = document.getElementById("aplicar-botao");
 
     
     botaoDialog.addEventListener("click", () => {
         dialog.showModal();
     });
 
-   
+    
     voltar.addEventListener("click", () => {
         dialog.close();
     });
 
     
-    const iconButton = document.getElementById("buttonDialog");
-    const contadorElement = document.createElement("span");
-    contadorElement.className = "contador-filtros";
-    iconButton.appendChild(contadorElement);
+    aplicar.addEventListener("click", (event) => {
+        event.preventDefault(); 
+        dialog.close();
+        buscarNoticias();
+    });
 
     
-    function atualizarContagemFiltros() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-
-       
-        const parametrosIgnorados = ["page", "busca"];
-
-        let contadorFiltrosAtivos = 0;
-
+    async function buscarNoticias() {
         
-        for (const key of urlParams.keys()) {
-            if (!parametrosIgnorados.includes(key)) {
-                contadorFiltrosAtivos++;
-            }
-        }
+        const queryString = new URLSearchParams(parametros).toString();
+        const url = `http://servicodados.ibge.gov.br/api/v3/noticias?${queryString}`;
 
-       
-        contadorElement.textContent = contadorFiltrosAtivos.toString();
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Erro ao buscar notícias');
+            }
+            const noticias = await response.json();
+            console.log('Notícias encontradas:', noticias);
+        } catch (error) {
+            console.error('Erro na requisição:', error);
+        }
     }
 
-    
-    atualizarContagemFiltros();
+
 });
