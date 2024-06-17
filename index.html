@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>PROVA WEB</title>
+</head>
+<body>
+    <header>
+        <div class="header-texto">
+            <div class="texto-01">
+                <h1>Portal de Notícias do IBGE</h1>
+            </div>
+        
+            <div class="texto-02">
+                <form>
+                    <input type="text" placeholder="Buscar Notícias por termo">
+                    <button type="submit">🔍</button>
+                </form>
+                <button id="buttonDialog"><svg
+                    width="20"
+                    height="20"
+                    fill="#f0f0f0"
+                    viewBox="0 0 80 90"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+                ></svg></button>
+            </div>
+        </div>
+        
 
+        
+        
+        <dialog id="dialog-template">
+            <form id="form-dialog">
+                <div class="visual-filtro">
+                    <p>tipo</p>
+                    <select class="tamanho-input">
+                        <option value="">Selecione</option>
+                        <option value="Noticia">Notícia</option>
+                        <option value="Realease">Release</option>
+
+                    </select>
+                </div>
+                <div class="visual-filtro">            
+                    <p>quantidade</p>
+                    <select class="tamanho-input">
+                        <option value="10">10</option>
+                        <option value="5">5</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select></div>
+           
+                <div class="visual-filtro">
+                    <p>De</p>
+                    <input type="date" class="tamanho-input"></div>
+                </div>
+    
+                <div class="visual-filtro">
+                    <p>Até</p>
+                    <input type="date" class="tamanho-input">
+                </div>
+                <button type="sumit">Filtrar</button>
+            </form>
+            
+            <button id="voltar">X</button>
+        </dialog>
+    </header>
+    <main>
+
+        <div id="principal">
+            <p>comida boa</p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 1fr 6fr 1fr;
+ 
+}
+
+header {
+    display: grid;
+    background-color: #4682b4 ;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;    
+}
+
+header form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+header h1{
+    color: #f0f0f0;
+}
+header form input {
+    position: absolute;
+    width: 400px;
+    height: 25px;
+}
+header form button {
+    cursor: pointer;
+    position: relative;
+    left: 180px; top: 2px;
+    background: none;
+    border: none;
+}
+
+.texto-02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonDialog {
+    position: relative;
+    background: none;
+    border: none;
+    left: 200px; 
+    top: 5px;
+    cursor: pointer;
+}
+.contador-filtros {
+    position: absolute;
+    top: 6px;
+    right: -8px;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+#dialog-template {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#form-dialog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.tamanho-input {
+    width: 200px;
+}
+
+.visual-filtro {
+    margin-bottom: 10px;
+}
+
+#voltar {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+main {
+    display: grid;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center; 
+    margin: 0;
+}
+#principal {
+    max-width: 100ch;
+}
+footer {
+    background-color:#4682b4 ;
+}
