@@ -94,7 +94,11 @@ header form button {
 .tamanho-input {
     width: 200px;
 }
-
+#aplicar-botao{
+    width: 100%;
+    background-color: #4682b4;
+    color: white;
+}
 .visual-filtro {
     margin-bottom: 10px;
 }
